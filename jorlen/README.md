@@ -225,6 +225,7 @@ For complete API documentation, see [ARCHITECTURE.md](ARCHITECTURE.md).
 | [QUICKSTART.md](QUICKSTART.md) | 5-minute setup guide |
 | [DOCUMENTATION.md](DOCUMENTATION.md) | Complete system docs |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Technical design & API |
+| [AI_ASSISTANT_PROMPT.md](AI_ASSISTANT_PROMPT.md) | AI-powered CRM assistant guide |
 | [backend/SETUP.md](backend/SETUP.md) | Backend setup guide |
 | [frontend/SETUP.md](frontend/SETUP.md) | Frontend setup guide |
 
@@ -345,6 +346,28 @@ Include:
 - Review changelogs before upgrades
 - Test in development before production
 - Backup database before major changes
+
+## 🤖 AI-Powered CRM Assistant
+
+This CRM system includes an **AI-powered assistant** designed to help users navigate and maximize the platform's capabilities.
+
+### What the AI Assistant Can Help With:
+- **Navigation & Training** - Learn how to use any feature or module
+- **Workflow Guidance** - Step-by-step help with customer onboarding, sales processes, ticketing, etc.
+- **Troubleshooting** - Diagnose and resolve common issues
+- **API Integration** - Guide developers through API usage and integration
+- **Best Practices** - Recommend optimal ways to use the system
+- **Role-Specific Help** - Tailored assistance based on user role (Admin, Sales, Technician, Finance, Management)
+
+### Architecture Understanding:
+The AI assistant has deep knowledge of the complete system architecture:
+- **Presentation Layer** - Web dashboard and mobile app guidance
+- **API Gateway Layer** - Authentication and API integration help
+- **Business Logic Layer** - Workflow and business rules explanation
+- **Data Access Layer** - Database queries and data relationships
+- **Database Layer** - Schema understanding and data management
+
+See [AI_ASSISTANT_PROMPT.md](AI_ASSISTANT_PROMPT.md) for the complete AI assistant configuration and capabilities.
 
 ## 📈 Future Enhancements
 
