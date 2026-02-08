@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: jorlen_crm_db
+    environment:
+      POSTGRES_DB: jorlen_crm
+      POSTGRES_USER: crm_user
+      POSTGRES_PASSWORD: your_secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - jorlen_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crm_user -d jorlen_crm"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  adminer:
+    image: adminer
+    container_name: jorlen_crm_adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - jorlen_network
+
+volumes:
+  postgres_data:
+
+networks:
+  jorlen_network:
+    driver: bridge
